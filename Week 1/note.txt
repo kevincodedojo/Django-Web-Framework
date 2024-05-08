@@ -6,4 +6,27 @@ The commands added in the Labs/Readings/Videos are specific to the Operating Sys
 
 While all the labs work on independent shell, on completion, it is a good practice to stop the server by pressing a Command on the shell such as: Ctrl/Cmd + C
 
-Django project
+------------------------------
+--Django project
+
+mkdir builDjango
+
+cd builDjango/
+
+python3 -m venv tutorial-env
+
+source tutorial-env/bin/activate
+
+pip3 install django
+
+python3 -m django version
+
+django-admin startproject chefsTable
+
+python3 manage.py runserver
+(ensure you're in the correct directory where manage.py 
+is located before running this command)
+
+----------------
+--create a app in the project folder
+demoproject> python3 manege.py startapp demoapp
