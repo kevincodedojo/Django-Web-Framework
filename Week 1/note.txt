@@ -1,0 +1,9 @@
+This course recommends typing the code manually as you work through the exercises instead of copying and pasting. Typing the code will help you develop muscle memory and better your understanding of the fundamental concepts of this course.
+
+The lab will use the Python commands that work on Linux shell. So to run any Python command, it is advisable to use python3 as the keyword for invoking Python 3+ versions instead of just using the keyword python
+
+The commands added in the Labs/Readings/Videos are specific to the Operating System. For example, the use of Control instead of Command key in case of Windows OS and keyword python3 instead of python in case of MacOS. Learner should make the necessary adjustments in understanding  specific to the Operating System they use.  
+
+While all the labs work on independent shell, on completion, it is a good practice to stop the server by pressing a Command on the shell such as: Ctrl/Cmd + C
+
+Django project
