@@ -48,3 +48,15 @@ def about(request):
 
     #or 
     # return HttpResponse(path, content_type='text/html',charset='utf-8')
+
+
+# Creating request and response for drinks page
+def drinks(request, drink_name):
+    drink = {
+        "milk": "Milk is a white liquid produced by the mammary glands of mammals. It is the primary source of nutrition for infant mammals before they are able to digest other types of food.",
+        "coffee": "Coffee is a brewed drink prepared from roasted coffee beans, the seeds of berries from certain Coffea species.",
+        "tea": "Tea is an aromatic beverage commonly prepared by pouring hot or boiling water over cured or fresh leaves of the Camellia sinensis, an evergreen shrub native to East Asia.",
+        "water": "Water is a transparent, tasteless, odorless, and nearly colorless chemical substance, which is the main constituent of Earth's hydrosphere and the fluids of all known living organisms."
+    }
+    choice_of_drink = drink[drink_name]
+    return HttpResponse(f"<h2>{drink_name}</h2>" + choice_of_drink)
