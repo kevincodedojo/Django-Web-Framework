@@ -11,4 +11,6 @@ urlpatterns = [
     path('drinks/<str:drink_name>', views.drinks, name="drinks"),
 
     path('menu/', views.menu, name='menu'),
+
+    path('booking/', views.booking, name='booking'),
 ]

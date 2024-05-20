@@ -63,3 +63,7 @@ def drinks(request, drink_name):
 
 def menu(request):
     return HttpResponse("This is the menu page")
+
+def booking(request):
+    return HttpResponse("This is the booking page")
+    
