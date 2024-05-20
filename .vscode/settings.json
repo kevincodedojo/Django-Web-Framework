@@ -1,0 +1,7 @@
+{
+    "accessibility.signals.sounds.volume": 70,
+    "editor.screenReaderAnnounceInlineSuggestion": false,
+    "accessibility.verbosity.panelChat": false,
+    "accessibility.verbosity.terminal": false,
+    "editor.accessibilitySupport": "off"
+}
