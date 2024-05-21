@@ -17,3 +17,12 @@ class Booking(models.Model):
     guest_count = models.IntegerField()
     reservation_time = models.DateField(auto_now=True)
     comments = models.CharField(max_length=1000)
+
+class Employee(models.Model):
+    first_name = models.CharField(max_length=200)
+    last_name = models.CharField(max_length=200)
+    role = models.CharField(max_length=100)
+    shift = models.IntegerField()
+
+    def __str__(self):
+        return self.first_name
