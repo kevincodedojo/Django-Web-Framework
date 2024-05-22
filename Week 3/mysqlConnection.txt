@@ -1,0 +1,51 @@
+brew -v
+
+brew install mysql
+
+brew services start mysql
+
+mysql -u root -p
+
+mysql -u root
+
+----------------
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 8
+Server version: 8.3.0 Homebrew
+----------------
+
+show databases;
+
+Create database feedback;
+
+create USER 'admindjango'@'localhost' IDENTIFIED BY 'password';
+
+GRANT ALL ON *.* TO 'admindjango'@'localhost';
+
+FLUSH PRIVILEGES;
+
+exit
+-------------------
+pip3 install mysqlclient
+
+go to settings.py
+#Settings.py
+
+
+DATABASES = {   
+    'default': {   
+        'ENGINE': 'django.db.backends.mysql',   
+        'NAME': 'mydatabase',   
+        'USER': 'root',   
+        'PASSWORD': '',   
+        'HOST': '127.0.0.1',   
+        'PORT': '3306',   
+        'OPTIONS': {   
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"   
+        }   
+    }   
+} 
+
+-----------------
+python3 manage.py makemigrations
+
