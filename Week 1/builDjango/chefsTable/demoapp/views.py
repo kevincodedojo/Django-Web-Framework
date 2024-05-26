@@ -11,32 +11,32 @@ def home(request):
 
 
 # Creating request and response for about page
-def about(request):
-    path = request.path
-    scheme = request.scheme
-    method = request.method
-    address = request.META['REMOTE_ADDR']
-    user_agent = request.META['HTTP_USER_AGENT']
-    path_info = request.path_info
+# def about(request):
+#     path = request.path
+#     scheme = request.scheme
+#     method = request.method
+#     address = request.META['REMOTE_ADDR']
+#     user_agent = request.META['HTTP_USER_AGENT']
+#     path_info = request.path_info
 
-    mag = f"""<br>
-        <br>Path: {path}
-        <br>Scheme: {scheme}
-        <br>Method: {method}
-        <br>Address: {address}
-        <br>User Agent: {user_agent}
-        <br>Path Info: {path_info}
-        <br>
-        <br>{request.headers}
+#     mag = f"""<br>
+#         <br>Path: {path}
+#         <br>Scheme: {scheme}
+#         <br>Method: {method}
+#         <br>Address: {address}
+#         <br>User Agent: {user_agent}
+#         <br>Path Info: {path_info}
+#         <br>
+#         <br>{request.headers}
 
-        #
-        <br> Request Headers: {request.headers}
+#         #
+#         <br> Request Headers: {request.headers}
 
-        response = HttpResponse()
-        response.headers['Age'] = 20
+#         response = HttpResponse()
+#         response.headers['Age'] = 20
 
 
-    """
+#     """
     #or 
     return HttpResponse(mag, content_type='text/html',charset='utf-8')
 
@@ -61,9 +61,16 @@ def drinks(request, drink_name):
     choice_of_drink = drink[drink_name]
     return HttpResponse(f"<h2>{drink_name}</h2>" + choice_of_drink)
 
-def menu(request):
-    return HttpResponse("This is the menu page")
+# def menu(request):
+#     return HttpResponse("This is the menu page")
 
 def booking(request):
     return HttpResponse("This is the booking page")
-    
+
+def about(request):
+    about_content = {'about': "Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist. The chefs draw inspiration from Italian, Greek, and Turkish culture and have a menu of 12–15 items that they rotate seasonally. The restaurant has a rustic and relaxed atmosphere with moderate prices, making it a popular place for a meal any time of the day."}
+    return render(request, 'about.html', about_content)
+
+def menu(request):
+    menu_content = {'menu': "Our menu is inspired by the Mediterranean diet. We offer a variety of dishes, including pasta, seafood, and vegetarian options. Our chefs use fresh, locally sourced ingredients to create delicious and healthy meals that are perfect for sharing with friends and family. We also have a selection of wines and cocktails to complement your meal. Come and experience the flavors of the Mediterranean at Little Lemon!"}
+    return render(request, 'menu.html', menu_content)
