@@ -1,4 +1,4 @@
-{% load static %}
+<!-- {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,19 +10,28 @@
 </head>
 
 <body>
-    <!-- Add heading code -->
     <h1 style="color: #495E57">
         Menu
     </h1>
     <p>
     *Little Lemon*    We offer a wide range of dishes to suit every taste. Our menu includes appetizers, main courses, desserts, and drinks. We use only the freshest ingredients and the finest spices to create delicious and flavorful dishes. Whether you are a vegetarian, a meat lover, or have a sweet tooth, we have something for everyone. Come and enjoy a meal at our restaurant and experience the flavors of our cuisine.
     </p>
-    <!-- Add paragraph code -->
 
-    <!-- Add image code -->
     <img src="{% static 'img/dessert.jpg' %}" alt="Dessert Image">
     <img src="{% static 'img/dessert.jpg' %}">
 
 </body>
 
-</html>
+</html> -->
+
+
+{% if menu %}
+
+{% for item in menu %}
+{{item.name}} : {{itme.price}}
+<br>
+{% endfor %}
+
+{% else %}
+<p>No menu items are available.</p>
+{% endif %}
