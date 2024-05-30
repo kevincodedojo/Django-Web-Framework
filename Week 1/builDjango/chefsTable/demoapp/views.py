@@ -82,3 +82,12 @@ def menu(request):
     menu_items = Menu.objects.all()
     items_dict = {"menu": menu_items}
     return render(request,"menu.html", items_dict)
+
+def home(request):
+    return render(request, 'home.html')
+
+def menu(request):
+    return render(request, 'menu.html')
+
+def book(request):
+    return render(request, 'book.html')
