@@ -44,3 +44,8 @@
 <p> Menu </p>
 <p> This is a Menu page for Little Lemon </p>
 {% endblock %}
+
+{% if menu %}
+
+{% for item in menu %}
+{{item.name}} : {{itme.price}}
